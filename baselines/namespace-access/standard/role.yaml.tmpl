@@ -4,11 +4,14 @@ metadata:
   name: ${NS_NAME}-developer
   namespace: ${NS_NAME}
   labels:
+    project: ${PROJECT}
+    team: ${TEAM}
+    environment: ${ENV}
     baseline.kratix.io/version: ${BASELINE_VERSION}
-    baseline.kratix.io/size: ${BASELINE_SIZE}
+    baseline.kratix.io/size: ${ACCESS_LEVEL}
   annotations:
     baseline.kratix.io/version: ${BASELINE_VERSION}
-    baseline.kratix.io/size: ${BASELINE_SIZE}
+    baseline.kratix.io/size: ${ACCESS_LEVEL}
 rules:
   - apiGroups: ["", "apps", "batch"]
     resources: ["pods", "services", "deployments", "configmaps", "secrets", "jobs"]

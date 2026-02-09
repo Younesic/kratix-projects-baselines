@@ -4,14 +4,17 @@ metadata:
   name: ${NS_NAME}-developer
   namespace: ${NS_NAME}
   labels:
+    project: ${PROJECT}
+    team: ${TEAM}
+    environment: ${ENV}
     baseline.kratix.io/version: ${BASELINE_VERSION}
-    baseline.kratix.io/size: ${BASELINE_SIZE}
+    baseline.kratix.io/size: ${ACCESS_LEVEL}
   annotations:
     baseline.kratix.io/version: ${BASELINE_VERSION}
-    baseline.kratix.io/size: ${BASELINE_SIZE}
+    baseline.kratix.io/size: ${ACCESS_LEVEL}
 subjects:
   - kind: Group
-    name: proj-${PROJECT}-${ENV}
+    name: ${GROUP_NAME}
     apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
