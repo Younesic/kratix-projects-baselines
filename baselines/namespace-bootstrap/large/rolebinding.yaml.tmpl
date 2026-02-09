@@ -2,6 +2,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: ${NS_NAME}-developer
+  annotations:
+    baseline.kratix.io/version: ${BASELINE_VERSION}
+    baseline.kratix.io/size: ${BASELINE_SIZE}
   namespace: ${NS_NAME}
 subjects:
   - kind: Group
@@ -9,5 +12,6 @@ subjects:
     apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
+  name: ${NS_NAME}-developer
   name: ${NS_NAME}-developer
   apiGroup: rbac.authorization.k8s.io

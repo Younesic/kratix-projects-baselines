@@ -2,6 +2,9 @@
   kind: ResourceQuota
   metadata:
     name: ${NS_NAME}-quota
+    annotations:
+      baseline.kratix.io/version: ${BASELINE_VERSION}
+      baseline.kratix.io/size: ${BASELINE_SIZE}
     namespace: ${NS_NAME}
   spec:
     hard:

@@ -2,6 +2,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: ${NS_NAME}-developer
+  annotations:
+    baseline.kratix.io/version: ${BASELINE_VERSION}
+    baseline.kratix.io/size: ${BASELINE_SIZE}
   namespace: ${NS_NAME}
 rules:
   - apiGroups: ["", "apps", "batch"]

@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: ${NS_NAME}
+  annotations:
+    baseline.kratix.io/version: ${BASELINE_VERSION}
+    baseline.kratix.io/size: ${BASELINE_SIZE}
   labels:
     project: ${PROJECT}
     team: ${TEAM}

@@ -2,6 +2,9 @@
   kind: LimitRange
   metadata:
     name: ${NS_NAME}-limits
+    annotations:
+      baseline.kratix.io/version: ${BASELINE_VERSION}
+      baseline.kratix.io/size: ${BASELINE_SIZE}
     namespace: ${NS_NAME}
   spec:
     limits:
