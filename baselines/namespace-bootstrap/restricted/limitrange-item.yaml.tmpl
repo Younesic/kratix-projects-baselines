@@ -2,10 +2,13 @@
   kind: LimitRange
   metadata:
     name: ${NS_NAME}-limits
+    namespace: ${NS_NAME}
+    labels:
+      baseline.kratix.io/version: ${BASELINE_VERSION}
+      baseline.kratix.io/size: ${BASELINE_SIZE}
     annotations:
       baseline.kratix.io/version: ${BASELINE_VERSION}
       baseline.kratix.io/size: ${BASELINE_SIZE}
-    namespace: ${NS_NAME}
   spec:
     limits:
       - type: Container
