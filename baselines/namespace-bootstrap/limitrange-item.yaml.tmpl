@@ -1,0 +1,14 @@
+- apiVersion: v1
+  kind: LimitRange
+  metadata:
+    name: ${NS_NAME}-limits
+    namespace: ${NS_NAME}
+  spec:
+    limits:
+      - type: Container
+        default:
+          cpu: ${CPU_LIM}
+          memory: ${MEM_LIM}
+        defaultRequest:
+          cpu: ${CPU_REQ}
+          memory: ${MEM_REQ}
